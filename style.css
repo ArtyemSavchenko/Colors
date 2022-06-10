@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin: 0;
+  max-width: 550px;
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.color-name {
+  font-size: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 50px 30%;
+  gap: 30px;
+}
