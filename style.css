@@ -28,3 +28,7 @@ p {
   padding: 50px 30%;
   gap: 30px;
 }
+
+.border {
+  border-top: 5px #000 dotted;
+}
