@@ -1,27 +1,8 @@
-body {
+.page {
   margin: 0;
 }
 
-p {
-  font-family: sans-serif;
-  font-size: 24px;
-  margin: 0;
-  max-width: 550px;
-}
-
-.black {
-  color: #000;
-}
-
-.white {
-  color: #fff;
-}
-
-.color-name {
-  font-size: 32px;
-}
-
-.container {
+.color {
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -29,6 +10,72 @@ p {
   gap: 30px;
 }
 
-.border {
-  border-top: 5px #000 dotted;
+.color__name {
+  color: #000;
+  cursor: pointer;
+  font-size: 32px;
+  padding: 0.5em 0.7em;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3em;
+  position: relative;
+  overflow: hidden;
+}
+
+.color__name::after {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 488.3 488.3' style='enable-background:new 0 0 488.3 488.3' xml:space='preserve'%3E%3Cpath d='M314.25 85.4h-227c-21.3 0-38.6 17.3-38.6 38.6v325.7c0 21.3 17.3 38.6 38.6 38.6h227c21.3 0 38.6-17.3 38.6-38.6V124c-.1-21.3-17.4-38.6-38.6-38.6zm11.5 364.2c0 6.4-5.2 11.6-11.6 11.6h-227c-6.4 0-11.6-5.2-11.6-11.6V124c0-6.4 5.2-11.6 11.6-11.6h227c6.4 0 11.6 5.2 11.6 11.6v325.6z'/%3E%3Cpath d='M401.05 0h-227c-21.3 0-38.6 17.3-38.6 38.6 0 7.5 6 13.5 13.5 13.5s13.5-6 13.5-13.5c0-6.4 5.2-11.6 11.6-11.6h227c6.4 0 11.6 5.2 11.6 11.6v325.7c0 6.4-5.2 11.6-11.6 11.6-7.5 0-13.5 6-13.5 13.5s6 13.5 13.5 13.5c21.3 0 38.6-17.3 38.6-38.6V38.6c0-21.3-17.3-38.6-38.6-38.6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.color__name::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 406.834 406.834' style='enable-background:new 0 0 406.834 406.834' xml:space='preserve'%3E%3Cpath d='M385.621 62.507 146.225 301.901 21.213 176.891 0 198.104l146.225 146.223L406.834 83.72z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+
+.color__name_accept::before {
+  transition: opacity .1s linear;
+  opacity: 1;
+}
+
+
+
+
+.color__name:hover {
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.color__text {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin: 0;
+  max-width: 550px;
+}
+
+.color__text_black {
+  color: #000;
+}
+
+.color__text_white {
+  color: #fff;
 }
